@@ -1,0 +1,255 @@
+// Variables
+
+$color-texto: whitesmoke;
+$color-titulos: aliceblue;
+$fuente-principal: Arial, Helvetica, sans-serif;
+
+// Imports
+
+@import "index";
+@import "releases";
+
+
+
+//BARRA NEGRA SEPARADORA
+.barranegra{
+    padding: 30px;
+    background-color: #060606;
+    }
+
+
+
+
+
+/* Estilos del FOOTER */
+footer{
+    background-color: rgb(70, 65, 65);
+}
+
+.redes{
+    ul {
+    list-style: none;
+    padding-top: 5px;
+    justify-content: flex-start;
+    }
+}
+
+.redes{
+    ul{
+        li{
+            a{
+    text-decoration: none;
+    font-size: smaller ;     
+    color: rgb(142, 140, 143);
+            }
+        }
+    }
+}
+
+.textofooter{
+    display: flexbox;
+    justify-content: flex-end;
+    align-items: center;
+        
+    }
+
+
+
+/* DISCOGRAFIA */
+
+.discografia{
+    font-family: $fuente-principal;
+    color: $color-texto;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.releases{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    background-color: rgba(53, 54, 100, 0.288);
+    
+}
+
+.releases-2 {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $fuente-principal;
+    text-align: center;
+    color: $color-texto;
+}
+
+/* EVENTOS */
+
+.titulo-eventos{
+    padding: 15px;    
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    color: $color-titulos;
+    text-align: center;
+}
+
+.grilla-eventos{
+    color: $color-titulos;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "mayo"
+    "junio"
+    "julio"
+    "agosto"
+    ;
+    
+}
+
+.mayo{
+    grid-area: mayo;
+    
+}
+
+.junio{
+    grid-area: junio;
+    
+}
+
+.julio{
+    grid-area: julio;
+}
+
+.agosto{
+    grid-area: agosto;
+}
+
+.botoncompra{
+    justify-content: center;
+}
+
+
+
+
+/* CONTACTO */
+
+.titulocontacto{
+    color: $color-texto;
+}
+
+.redes {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.formulariocontacto{
+    color: $color-texto;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .titulo-lateral {
+        h1{
+        font-size: 70px;
+        }
+    }
+}
+
+.grilla-eventos{
+    display: grid;
+    grid-template-areas: 
+    "mayo junio"
+    "julio agosto"
+    ;
+
+}
+
+/* ANIMACIONES / TRANSICIONES */
+
+
+.foto-lateral{
+    transition-property: all;
+    transition-duration: .5s;
+    opacity: 1;
+    animation-name: fade-in;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+
+}
+.foto-lateral:hover {
+    transform: scale(.9);
+}
+
+#worlds-unseen{
+    transition-property: all;
+transition-duration: .5s;
+}
+#worlds-unseen:hover {
+    transform: scale(1.5);
+}
+
+#endless-road{
+    transition-property: all;
+transition-duration: .5s;
+}
+#endless-road:hover {
+    transform: scale(1.5);
+}
+
+#set{
+    transition-property: all;
+transition-duration: .5s;
+}
+#set:hover {
+    transform: scale(1.5);
+}
+
+
+#tpas2{
+    transition-property: all;
+    transition-duration: .5s;
+}
+#tpas2:hover{
+    transform: scale(1.5);
+}
+
+#tpas1{
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+#tpas1:hover{
+    transform: scale(1.5);
+}
+
+@keyframes fade-in {
+    0%{
+        transform: translateX(500px);
+        opacity: 0;
+
+    }
+
+    50%{
+        transform: translateX(80px);
+        opacity: .5;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+
+}
+
+
